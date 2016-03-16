@@ -140,7 +140,7 @@
     SPAppDelegate *delegate = (id)[[NSApplication sharedApplication] delegate];
     SPSearchPanel *panel = delegate.window;
     
-    if ([self shouldBeCollapsed] != [panel collapsedState]) {
+    if ([self shouldBeCollapsed] != [panel isCollapsed]) {
         if ([self shouldBeCollapsed]) {
             [panel collapse];
         } else {
@@ -156,7 +156,7 @@
     BOOL queryEmpty = self.query.length == 0;
     BOOL queryFinished = self.query == self.mostRecentQueryWithResults || [self.query isEqualToString:self.mostRecentQueryWithResults];
     BOOL noResults = self.results.count == 0;
-    BOOL isCollapsedNow = [panel collapsedState];
+    BOOL isCollapsedNow = [panel isCollapsed];
     
     BOOL canCollapse = queryEmpty || (queryFinished && noResults) || (!queryFinished && noResults && isCollapsedNow);
     

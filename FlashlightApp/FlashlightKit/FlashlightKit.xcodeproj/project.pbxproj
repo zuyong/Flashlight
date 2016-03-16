@@ -88,6 +88,11 @@
 		5FC13E751A4E6B58008A0FE3 /* NSTask+FlashlightExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC13E731A4E6B58008A0FE3 /* NSTask+FlashlightExtensions.m */; };
 		5FF873121A6D718800EAD72F /* NSObject+InternationalizedValueForKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FF873101A6D718800EAD72F /* NSObject+InternationalizedValueForKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5FF873131A6D718800EAD72F /* NSObject+InternationalizedValueForKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF873111A6D718800EAD72F /* NSObject+InternationalizedValueForKey.m */; };
+		FAAA4B451C99FA4A0011DCF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA4B441C99FA4A0011DCF0 /* Foundation.framework */; };
+		FAAA4B471C99FAE70011DCF0 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA4B461C99FAE70011DCF0 /* CoreServices.framework */; };
+		FAAA4B491C99FAF30011DCF0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA4B481C99FAF30011DCF0 /* Cocoa.framework */; };
+		FAAA4B4B1C99FAFC0011DCF0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA4B4A1C99FAFC0011DCF0 /* WebKit.framework */; };
+		FAAA4B4D1C99FB020011DCF0 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA4B4C1C99FB020011DCF0 /* ScriptingBridge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +190,11 @@
 		5FC13E731A4E6B58008A0FE3 /* NSTask+FlashlightExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTask+FlashlightExtensions.m"; sourceTree = "<group>"; };
 		5FF873101A6D718800EAD72F /* NSObject+InternationalizedValueForKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+InternationalizedValueForKey.h"; sourceTree = "<group>"; };
 		5FF873111A6D718800EAD72F /* NSObject+InternationalizedValueForKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+InternationalizedValueForKey.m"; sourceTree = "<group>"; };
+		FAAA4B441C99FA4A0011DCF0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FAAA4B461C99FAE70011DCF0 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		FAAA4B481C99FAF30011DCF0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		FAAA4B4A1C99FAFC0011DCF0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		FAAA4B4C1C99FB020011DCF0 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +202,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAA4B4D1C99FB020011DCF0 /* ScriptingBridge.framework in Frameworks */,
+				FAAA4B4B1C99FAFC0011DCF0 /* WebKit.framework in Frameworks */,
+				FAAA4B491C99FAF30011DCF0 /* Cocoa.framework in Frameworks */,
+				FAAA4B471C99FAE70011DCF0 /* CoreServices.framework in Frameworks */,
+				FAAA4B451C99FA4A0011DCF0 /* Foundation.framework in Frameworks */,
 				5F5F35F71A7040700027AF00 /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +293,11 @@
 		5FC13DE41A4E12DB008A0FE3 = {
 			isa = PBXGroup;
 			children = (
+				FAAA4B4C1C99FB020011DCF0 /* ScriptingBridge.framework */,
+				FAAA4B4A1C99FAFC0011DCF0 /* WebKit.framework */,
+				FAAA4B481C99FAF30011DCF0 /* Cocoa.framework */,
+				FAAA4B461C99FAE70011DCF0 /* CoreServices.framework */,
+				FAAA4B441C99FA4A0011DCF0 /* Foundation.framework */,
 				5FC13DF01A4E12DB008A0FE3 /* FlashlightKit */,
 				5FC13DFD1A4E12DB008A0FE3 /* FlashlightKitTests */,
 				5FC13DEF1A4E12DB008A0FE3 /* Products */,
@@ -451,7 +471,7 @@
 				TargetAttributes = {
 					5FC13DED1A4E12DB008A0FE3 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = VPN8ZW6EAC;
+						DevelopmentTeam = 3GD8ABJ22W;
 					};
 					5FC13DF81A4E12DB008A0FE3 = {
 						CreatedOnToolsVersion = 6.1;
@@ -661,7 +681,7 @@
 		5FC13E051A4E12DB008A0FE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -689,7 +709,7 @@
 		5FC13E061A4E12DB008A0FE3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;

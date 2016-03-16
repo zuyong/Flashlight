@@ -8,22 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5F5B174D1A05758800809207 /* _Flashlight_Bootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B174C1A05758800809207 /* _Flashlight_Bootstrap.m */; };
-		5F5B18191A05821700809207 /* RSSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B18181A05821700809207 /* RSSwizzle.m */; };
-		5F5B181E1A058CDA00809207 /* CTBlockDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B181B1A058CDA00809207 /* CTBlockDescription.m */; };
-		5F5B181F1A058CDA00809207 /* CTObjectiveCRuntimeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B181D1A058CDA00809207 /* CTObjectiveCRuntimeAdditions.m */; };
-		5F5B18311A05A1A000809207 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B18261A05A1A000809207 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5F5B18321A05A1A000809207 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B18281A05A1A000809207 /* RTIvar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5F5B18331A05A1A000809207 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B182A1A05A1A000809207 /* RTMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5F5B18341A05A1A000809207 /* RTProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B182C1A05A1A000809207 /* RTProperty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5F5B18351A05A1A000809207 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B182E1A05A1A000809207 /* RTProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5F5B18361A05A1A000809207 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B18301A05A1A000809207 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5F5B183C1A06C6EE00809207 /* NSObject+LogProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B183B1A06C6EE00809207 /* NSObject+LogProperties.m */; };
 		5F5B183F1A06CB0000809207 /* SPOpenAPIResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B183E1A06CB0000809207 /* SPOpenAPIResult.m */; };
-		5F5B18411A06EDB600809207 /* MethodOverride.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B18401A06EDB600809207 /* MethodOverride.m */; };
 		5F5B18441A07197500809207 /* SPOpenAPIPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5B18431A07197500809207 /* SPOpenAPIPreviewViewController.xib */; };
 		5FC13E711A4E4AA8008A0FE3 /* _FlashlightPluginEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC13E701A4E4AA8008A0FE3 /* _FlashlightPluginEngine.m */; };
 		5FF5D40E1A675B7D00641D7A /* FlashlightKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF5D4091A675B5300641D7A /* FlashlightKit.framework */; };
 		5FF5D4181A677D9B00641D7A /* FlashlightKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FF5D4091A675B5300641D7A /* FlashlightKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA4550A01C99FA0C007E4F81 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45509F1C99FA0C007E4F81 /* Cocoa.framework */; };
+		FAE3F30F1C99EB890058C7C7 /* Opee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE3F30E1C99EB890058C7C7 /* Opee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,34 +249,16 @@
 		5F5B180C1A057AB100809207 /* SPWebResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPWebResult.h; sourceTree = "<group>"; };
 		5F5B180D1A057AB100809207 /* SPWebSliceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPWebSliceController.h; sourceTree = "<group>"; };
 		5F5B180E1A057AB100809207 /* SPWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPWebViewController.h; sourceTree = "<group>"; };
-		5F5B18171A05821700809207 /* RSSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSwizzle.h; sourceTree = "<group>"; };
-		5F5B18181A05821700809207 /* RSSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSwizzle.m; sourceTree = "<group>"; };
-		5F5B181A1A058CDA00809207 /* CTBlockDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBlockDescription.h; sourceTree = "<group>"; };
-		5F5B181B1A058CDA00809207 /* CTBlockDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBlockDescription.m; sourceTree = "<group>"; };
-		5F5B181C1A058CDA00809207 /* CTObjectiveCRuntimeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTObjectiveCRuntimeAdditions.h; sourceTree = "<group>"; };
-		5F5B181D1A058CDA00809207 /* CTObjectiveCRuntimeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTObjectiveCRuntimeAdditions.m; sourceTree = "<group>"; };
-		5F5B18251A05A1A000809207 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
-		5F5B18261A05A1A000809207 /* MARTNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARTNSObject.m; sourceTree = "<group>"; };
-		5F5B18271A05A1A000809207 /* RTIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTIvar.h; sourceTree = "<group>"; };
-		5F5B18281A05A1A000809207 /* RTIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTIvar.m; sourceTree = "<group>"; };
-		5F5B18291A05A1A000809207 /* RTMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMethod.h; sourceTree = "<group>"; };
-		5F5B182A1A05A1A000809207 /* RTMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMethod.m; sourceTree = "<group>"; };
-		5F5B182B1A05A1A000809207 /* RTProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTProperty.h; sourceTree = "<group>"; };
-		5F5B182C1A05A1A000809207 /* RTProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProperty.m; sourceTree = "<group>"; };
-		5F5B182D1A05A1A000809207 /* RTProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTProtocol.h; sourceTree = "<group>"; };
-		5F5B182E1A05A1A000809207 /* RTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProtocol.m; sourceTree = "<group>"; };
-		5F5B182F1A05A1A000809207 /* RTUnregisteredClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUnregisteredClass.h; sourceTree = "<group>"; };
-		5F5B18301A05A1A000809207 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
 		5F5B183A1A06C6EE00809207 /* NSObject+LogProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LogProperties.h"; sourceTree = "<group>"; };
 		5F5B183B1A06C6EE00809207 /* NSObject+LogProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LogProperties.m"; sourceTree = "<group>"; };
 		5F5B183D1A06CB0000809207 /* SPOpenAPIResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPOpenAPIResult.h; sourceTree = "<group>"; };
 		5F5B183E1A06CB0000809207 /* SPOpenAPIResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPOpenAPIResult.m; sourceTree = "<group>"; };
-		5F5B18401A06EDB600809207 /* MethodOverride.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodOverride.m; sourceTree = "<group>"; };
-		5F5B18421A06EDBE00809207 /* MethodOverride.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodOverride.h; sourceTree = "<group>"; };
 		5F5B18431A07197500809207 /* SPOpenAPIPreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPOpenAPIPreviewViewController.xib; sourceTree = "<group>"; };
 		5FC13E6F1A4E4AA8008A0FE3 /* _FlashlightPluginEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FlashlightPluginEngine.h; sourceTree = "<group>"; };
 		5FC13E701A4E4AA8008A0FE3 /* _FlashlightPluginEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FlashlightPluginEngine.m; sourceTree = "<group>"; };
 		5FF5D4031A675B5300641D7A /* FlashlightKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FlashlightKit.xcodeproj; path = ../FlashlightKit/FlashlightKit.xcodeproj; sourceTree = "<group>"; };
+		FA45509F1C99FA0C007E4F81 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		FAE3F30E1C99EB890058C7C7 /* Opee.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Opee.framework; path = ../../../../../../../../Library/Frameworks/Opee.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +266,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4550A01C99FA0C007E4F81 /* Cocoa.framework in Frameworks */,
+				FAE3F30F1C99EB890058C7C7 /* Opee.framework in Frameworks */,
 				5FF5D40E1A675B7D00641D7A /* FlashlightKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +278,8 @@
 		5F5B17381A05757400809207 = {
 			isa = PBXGroup;
 			children = (
+				FA45509F1C99FA0C007E4F81 /* Cocoa.framework */,
+				FAE3F30E1C99EB890058C7C7 /* Opee.framework */,
 				5FF5D4031A675B5300641D7A /* FlashlightKit.xcodeproj */,
 				5F5B17431A05757500809207 /* SpotlightSIMBL */,
 				5F5B17421A05757500809207 /* Products */,
@@ -322,8 +300,6 @@
 				5F5B17441A05757500809207 /* Supporting Files */,
 				5F5B174B1A05758800809207 /* _Flashlight_Bootstrap.h */,
 				5F5B174C1A05758800809207 /* _Flashlight_Bootstrap.m */,
-				5F5B18421A06EDBE00809207 /* MethodOverride.h */,
-				5F5B18401A06EDB600809207 /* MethodOverride.m */,
 				5FC13E6F1A4E4AA8008A0FE3 /* _FlashlightPluginEngine.h */,
 				5FC13E701A4E4AA8008A0FE3 /* _FlashlightPluginEngine.m */,
 				5F5B183D1A06CB0000809207 /* SPOpenAPIResult.h */,
@@ -331,9 +307,6 @@
 				5F5B183A1A06C6EE00809207 /* NSObject+LogProperties.h */,
 				5F5B183B1A06C6EE00809207 /* NSObject+LogProperties.m */,
 				5F5B18431A07197500809207 /* SPOpenAPIPreviewViewController.xib */,
-				5F5B18381A05A1B800809207 /* RSSwizzle */,
-				5F5B18391A05A1BD00809207 /* CTObjectiveCRuntimeAdditions */,
-				5F5B18371A05A1AC00809207 /* MAObjcRuntime */,
 				5F5B17511A057AB100809207 /* SpotlightHeaders */,
 			);
 			path = SpotlightSIMBL;
@@ -543,45 +516,6 @@
 			path = SpotlightHeaders;
 			sourceTree = "<group>";
 		};
-		5F5B18371A05A1AC00809207 /* MAObjcRuntime */ = {
-			isa = PBXGroup;
-			children = (
-				5F5B18251A05A1A000809207 /* MARTNSObject.h */,
-				5F5B18261A05A1A000809207 /* MARTNSObject.m */,
-				5F5B18271A05A1A000809207 /* RTIvar.h */,
-				5F5B18281A05A1A000809207 /* RTIvar.m */,
-				5F5B18291A05A1A000809207 /* RTMethod.h */,
-				5F5B182A1A05A1A000809207 /* RTMethod.m */,
-				5F5B182B1A05A1A000809207 /* RTProperty.h */,
-				5F5B182C1A05A1A000809207 /* RTProperty.m */,
-				5F5B182D1A05A1A000809207 /* RTProtocol.h */,
-				5F5B182E1A05A1A000809207 /* RTProtocol.m */,
-				5F5B182F1A05A1A000809207 /* RTUnregisteredClass.h */,
-				5F5B18301A05A1A000809207 /* RTUnregisteredClass.m */,
-			);
-			name = MAObjcRuntime;
-			sourceTree = "<group>";
-		};
-		5F5B18381A05A1B800809207 /* RSSwizzle */ = {
-			isa = PBXGroup;
-			children = (
-				5F5B18171A05821700809207 /* RSSwizzle.h */,
-				5F5B18181A05821700809207 /* RSSwizzle.m */,
-			);
-			name = RSSwizzle;
-			sourceTree = "<group>";
-		};
-		5F5B18391A05A1BD00809207 /* CTObjectiveCRuntimeAdditions */ = {
-			isa = PBXGroup;
-			children = (
-				5F5B181A1A058CDA00809207 /* CTBlockDescription.h */,
-				5F5B181B1A058CDA00809207 /* CTBlockDescription.m */,
-				5F5B181C1A058CDA00809207 /* CTObjectiveCRuntimeAdditions.h */,
-				5F5B181D1A058CDA00809207 /* CTObjectiveCRuntimeAdditions.m */,
-			);
-			name = CTObjectiveCRuntimeAdditions;
-			sourceTree = "<group>";
-		};
 		5FF5D4041A675B5300641D7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -683,18 +617,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F5B18341A05A1A000809207 /* RTProperty.m in Sources */,
 				5F5B183C1A06C6EE00809207 /* NSObject+LogProperties.m in Sources */,
-				5F5B18351A05A1A000809207 /* RTProtocol.m in Sources */,
-				5F5B18361A05A1A000809207 /* RTUnregisteredClass.m in Sources */,
 				5F5B174D1A05758800809207 /* _Flashlight_Bootstrap.m in Sources */,
-				5F5B18321A05A1A000809207 /* RTIvar.m in Sources */,
-				5F5B181F1A058CDA00809207 /* CTObjectiveCRuntimeAdditions.m in Sources */,
-				5F5B18331A05A1A000809207 /* RTMethod.m in Sources */,
-				5F5B18311A05A1A000809207 /* MARTNSObject.m in Sources */,
-				5F5B18411A06EDB600809207 /* MethodOverride.m in Sources */,
-				5F5B181E1A058CDA00809207 /* CTBlockDescription.m in Sources */,
-				5F5B18191A05821700809207 /* RSSwizzle.m in Sources */,
 				5FC13E711A4E4AA8008A0FE3 /* _FlashlightPluginEngine.m in Sources */,
 				5F5B183F1A06CB0000809207 /* SPOpenAPIResult.m in Sources */,
 			);
@@ -788,15 +712,18 @@
 		5F5B17491A05757500809207 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Flashlight-ecbbmgoifutwxzgzjgruzjyizltl/Build/Products/Debug",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SpotlightSIMBL/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Opee/Extensions/";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -808,18 +735,22 @@
 		5F5B174A1A05757500809207 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Flashlight-ecbbmgoifutwxzgzjgruzjyizltl/Build/Products/Debug",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SpotlightSIMBL/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Opee/Extensions/";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SYMROOT = "$(PROJECT_DIR)/build";
 				WRAPPER_EXTENSION = bundle;
 			};

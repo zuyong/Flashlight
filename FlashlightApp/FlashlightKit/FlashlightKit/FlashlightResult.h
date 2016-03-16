@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@import WebKit;
+#import <WebKit/Webkit.h>
+
 @class FlashlightResultView;
 
 @interface FlashlightResult : NSObject

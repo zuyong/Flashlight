@@ -9,7 +9,7 @@
 #import "FlashlightToolAppDelegate.h"
 #import <FlashlightKit/FlashlightKit.h>
 
-@import WebKit;
+#import <WebKit/WebKit.h>
 
 @interface FlashlightToolAppDelegate () <NSWindowDelegate, NSTextFieldDelegate>
 

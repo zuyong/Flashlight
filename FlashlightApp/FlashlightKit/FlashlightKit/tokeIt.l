@@ -137,7 +137,7 @@ this              { yylval.number = 0;  return THIS;        }
 
 {regularTime}     { 
             
-            int i, j=strlen(yytext);
+            int i, j=(int)strlen(yytext);
 
             char apm[3] = ":am";
             for(i = 1; yytext[i] != '\0'; i++){

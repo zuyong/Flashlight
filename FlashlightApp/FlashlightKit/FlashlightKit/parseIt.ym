@@ -36,7 +36,7 @@ program expr         {
 //        NSLog(@"perty time = %s\n", asctime(str_time));
 //        NSLog(@"modifier num = %d", *mymodifier.changePointer);
 
-        $<number>$ = curtime2;
+        $<number>$ = (int)curtime2;
 
         for(int i=0; i<9; i++){
             fromChangeAmount[i] += changeAmount[i];

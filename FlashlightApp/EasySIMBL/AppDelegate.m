@@ -6,14 +6,13 @@
 
 #import <ServiceManagement/SMLoginItem.h>
 #import "AppDelegate.h"
-#import "SIMBL.h"
 #import "ITSwitch+Additions.h"
 #import "PluginListController.h"
 #import "PluginModel.h"
 #import <LetsMove/PFMoveApplication.h>
 #import "UpdateChecker.h"
 #import "PluginInstallTask.h"
-#import <Crashlytics/Crashlytics.h>
+//#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
 
@@ -33,21 +32,13 @@
 
 @synthesize window = _window;
 
-#pragma mark User defaults
-
-+ (void)initialize {
-    NSDictionary *initialValues = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:2],SIMBLPrefKeyLogLevel, nil];
-    [[NSUserDefaults standardUserDefaults]registerDefaults:initialValues];
-    [[NSUserDefaultsController sharedUserDefaultsController] setInitialValues:initialValues];
-}
-
 #pragma mark NSApplicationDelegate
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
 {
     NSLocalizedString(@"Flashlight: the missing plugin system for Spotlight.", @"");
     
-    [Crashlytics startWithAPIKey:@"c00a274f2c47ad5ee89b17ccb2fdb86e8d1fece8"];
+//    [Crashlytics startWithAPIKey:@"c00a274f2c47ad5ee89b17ccb2fdb86e8d1fece8"];
     
     self.SIMBLOn = YES;
     
@@ -58,61 +49,7 @@
     self.versionLabel.stringValue = [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"];
     
     PFMoveToApplicationsFolderIfNecessary();
-    
-    NSString *loginItemBundlePath = nil;
-    NSBundle *loginItemBundle = nil;
-    NSString *loginItemBundleVersion = nil;
-    NSError *error = nil;
-    NSString *loginItemsPath = [[[NSBundle mainBundle]bundlePath]stringByAppendingPathComponent:@"Contents/Library/LoginItems"];
-    NSArray *loginItems = [[[NSFileManager defaultManager]contentsOfDirectoryAtPath:loginItemsPath error:&error]
-                           pathsMatchingExtensions:[NSArray arrayWithObject:@"app"]];
-    if (error) {
-        SIMBLLogNotice(@"contentsOfDirectoryAtPath error:%@", error);
-    } else if (![loginItems count]) {
-        SIMBLLogNotice(@"no loginItems found at %@", loginItemsPath);
-    } else {
-        loginItemBundlePath = [loginItemsPath stringByAppendingPathComponent:[loginItems objectAtIndex:0]];
-        self.loginItemPath = loginItemBundlePath;
-        loginItemBundle = [NSBundle bundleWithPath:loginItemBundlePath];
-        loginItemBundleVersion = [loginItemBundle _dt_bundleVersion];
-        self.loginItemBundleIdentifier = [loginItemBundle bundleIdentifier];
-    }
-    if (self.loginItemBundleIdentifier && loginItemBundleVersion) {
-        NSArray *runningApplications = [NSRunningApplication runningApplicationsWithBundleIdentifier:self.loginItemBundleIdentifier];
-        
-        NSInteger state = NSOffState;
-        if ([runningApplications count]) {
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            [defaults addSuiteNamed:self.loginItemBundleIdentifier];
-            
-            if ([[defaults objectForKey:self.loginItemBundleIdentifier] isEqualToString:loginItemBundleVersion]) {
-                SIMBLLogInfo(@"'SIMBL Agent' is already running.");
-                
-                state = NSOnState;
-            } else {
-                // if running agent's bundle is different from my bundle, need restart agent from my bundle.
-                SIMBLLogInfo(@"'SIMBL Agent' is already running, but version is different.");
-                
-                CFStringRef bundleIdentifeierRef = (__bridge CFStringRef)self.loginItemBundleIdentifier;
-                state = NSOffState;
-                NSRunningApplication *runningApplication = [runningApplications objectAtIndex:0];
-                [runningApplication addObserver:self
-                                     forKeyPath:@"isTerminated"
-                                        options:NSKeyValueObservingOptionNew
-                                        context:(__bridge_retained void*)runningApplication];
-                if (!SMLoginItemSetEnabled(bundleIdentifeierRef, NO)) {
-                    SIMBLLogNotice(@"SMLoginItemSetEnabled(YES) failed!");
-                }
-            }
-        } else {
-            SIMBLLogInfo(@"'SIMBL Agent' is not running.");
-        }
-        [self setSIMBLOn:state == NSOnState animated:NO];
-    }
-    
-    [self restartSIMBLIfUpdated];
-    
-    // i18n:
+        // i18n:
     self.enablePluginsButton.title = NSLocalizedString(@"Enable", @"");
     self.createNewAutomatorPluginMenuItem.title = NSLocalizedString(@"New Automator Plugin...", @"");
     self.leaveFeedback.stringValue = NSLocalizedString(@"Leave Feedback", @"");
@@ -130,20 +67,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
     [self.window makeKeyAndOrderFront:nil];
-}
-
-- (void)restartSIMBLIfUpdated {
-    NSString *currentVersion = [[NSBundle mainBundle] infoDictionary][@"CFBundleVersion"];
-    if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"LastVersion"] isEqualToString:currentVersion]) {
-        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:@"LastVersion"];
-        // restart simbl:
-        if (self.SIMBLOn) {
-            self.SIMBLOn = NO;
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                self.SIMBLOn = YES;
-            });
-        }
-    }
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
@@ -195,8 +118,9 @@
 #pragma mark IBAction
 
 - (IBAction)toggleFlashlightEnabled:(id)sender {
-    BOOL result = !self.SIMBLOn;
     
+    BOOL result = !self.SIMBLOn;
+    /*
     NSURL *loginItemURL = [NSURL fileURLWithPath:self.loginItemPath];
     OSStatus status = LSRegisterURL((__bridge CFURLRef)loginItemURL, YES);
     if (status != noErr) {
@@ -209,6 +133,7 @@
         SIMBLLogNotice(@"SMLoginItemSetEnabled() failed!");
     }
     self.SIMBLOn = result;
+     */
     
     if (!result) {
         // restart spotlight after 1 sec to remove injected code:
@@ -222,9 +147,11 @@
         [self.pluginListController showInstalledPlugins];
     }
 }
+
 - (void)setSIMBLOn:(BOOL)SIMBLOn {
     [self setSIMBLOn:SIMBLOn animated:YES];
 }
+
 - (void)setSIMBLOn:(BOOL)SIMBLOn animated:(BOOL)animated {
     _SIMBLOn = SIMBLOn;
     self.pluginListController.enabled = SIMBLOn;

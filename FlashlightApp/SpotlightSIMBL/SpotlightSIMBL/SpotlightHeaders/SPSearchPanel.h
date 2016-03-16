@@ -4,48 +4,77 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
-#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
 
-@class NSArray, NSView, SPFTEController, SPSearchField;
+@class NSAlignmentFeedbackFilter, NSArray, NSView, SPFTEController, SPSearchField;
 
 @interface SPSearchPanel : NSPanel
 {
     SPFTEController *_fteController;
-    BOOL _internalCollapsed;
-    BOOL _collapsedState;
+    BOOL _shouldCenter;
+    _Bool _dragging;
+    _Bool _doNotResetScreen;
+    _Bool _alignedCenter;
+    _Bool _alignOriginalPosition;
+    BOOL _windowPositionRestoredYet;
     NSView *_topView;
     SPSearchField *_searchField;
     NSView *_resultsView;
     NSView *_mainView;
-    struct CGSize _contentMaxSizeWhenExpanded;
+    unsigned long long _panelState;
+    double _heightWhenCollapsed;
+    double _windowWidth;
+    NSAlignmentFeedbackFilter *_alignmentFilter;
+    struct CGPoint _dragOffset;
 }
 
-+ (void)setScreen:(id)arg1;
 + (id)screen;
-@property struct CGSize contentMaxSizeWhenExpanded; // @synthesize contentMaxSizeWhenExpanded=_contentMaxSizeWhenExpanded;
-@property BOOL collapsedState; // @synthesize collapsedState=_collapsedState;
-@property BOOL internalCollapsed; // @synthesize internalCollapsed=_internalCollapsed;
+@property(retain) NSAlignmentFeedbackFilter *alignmentFilter; // @synthesize alignmentFilter=_alignmentFilter;
+@property struct CGPoint dragOffset; // @synthesize dragOffset=_dragOffset;
+@property BOOL windowPositionRestoredYet; // @synthesize windowPositionRestoredYet=_windowPositionRestoredYet;
+@property _Bool alignOriginalPosition; // @synthesize alignOriginalPosition=_alignOriginalPosition;
+@property _Bool alignedCenter; // @synthesize alignedCenter=_alignedCenter;
+@property _Bool doNotResetScreen; // @synthesize doNotResetScreen=_doNotResetScreen;
+@property _Bool dragging; // @synthesize dragging=_dragging;
+@property double windowWidth; // @synthesize windowWidth=_windowWidth;
+@property double heightWhenCollapsed; // @synthesize heightWhenCollapsed=_heightWhenCollapsed;
+@property unsigned long long panelState; // @synthesize panelState=_panelState;
+@property BOOL shouldCenter; // @synthesize shouldCenter=_shouldCenter;
 @property(retain) NSView *mainView; // @synthesize mainView=_mainView;
 @property __weak NSView *resultsView; // @synthesize resultsView=_resultsView;
 @property __weak SPSearchField *searchField; // @synthesize searchField=_searchField;
 @property __weak NSView *topView; // @synthesize topView=_topView;
-// - (void).cxx_destruct;
 @property(readonly) NSArray *accessibilitySharedFocusElementsForSearchFieldCell;
 - (void)accessibilityResultsViewDidChange;
+- (void)screenConfigurationChanged:(id)arg1;
+- (void)resetWindowHeightToDefault;
+- (struct CGRect)recomputeFrame:(struct CGRect)arg1 forVisibleScreenArea:(struct CGRect)arg2;
+- (void)saveWindowPosition;
+- (void)setHeightWhenExpanded:(double)arg1;
+- (double)heightWhenExpanded;
+- (void)setUserHasMovedWindow:(BOOL)arg1;
+- (BOOL)userHasMovedWindow;
+- (void)setLastWindowPosition:(struct CGRect)arg1;
+- (struct CGRect)lastWindowPosition;
+- (void)setLastVisibleScreenRect:(struct CGRect)arg1;
+- (struct CGRect)lastVisibleScreenRect;
+- (struct CGSize)_shadowOffsetForActiveAppearance:(BOOL)arg1;
+- (unsigned long long)shadowOptionsForActiveAppearance:(BOOL)arg1;
 - (id)_cornerMask;
 - (void)swipeWithEvent:(id)arg1;
 - (void)expand;
 - (void)collapse;
 @property(getter=isCollapsed) BOOL collapsed;
 - (void)setCollapsed:(BOOL)arg1 animate:(BOOL)arg2;
-- (void)_rememberSettingsAsWhenExpanded;
 - (void)setFirstUseExperience:(BOOL)arg1;
-@property(readonly) BOOL firstUse;
-- (void)_restoreSettingsToWhenExpanded;
-- (struct CGRect)_splitViewRectForContentViewRect:(struct CGRect)arg1;
-- (void)_setHeight:(double)arg1 showMainView:(BOOL)arg2 animate:(BOOL)arg3;
+- (void)showFirstUserExperienceView;
+- (void)showMainView;
+- (void)displayView:(id)arg1 withMinimumHeight:(double)arg2;
+- (void)setFrame:(struct CGRect)arg1 display:(BOOL)arg2;
+- (struct CGPoint)defaultPositionOrigin;
 - (struct CGRect)constrainFrameRect:(struct CGRect)arg1 toScreen:(id)arg2;
 - (unsigned long long)collectionBehavior;
+@property(readonly) BOOL firstUse;
 - (BOOL)canBecomeMainWindow;
 - (BOOL)canBecomeKeyWindow;
 - (void)insertNewline:(id)arg1;
@@ -53,9 +82,13 @@
 - (BOOL)_tryCopySelectedItemToPasteboard;
 - (void)sendEvent:(id)arg1;
 - (id)initWithContentRect:(struct CGRect)arg1 styleMask:(unsigned long long)arg2 backing:(unsigned long long)arg3 defer:(BOOL)arg4;
-@property(readonly) double heightWhenExpanded;
-@property(readonly) double heightWhenCollapsed;
+- (void)mouseUp:(id)arg1;
+- (void)mouseDragged:(id)arg1;
+- (void)mouseDown:(id)arg1;
+- (void)dealloc;
 - (void)awakeFromNib;
+- (BOOL)mouseDownCanMoveWindow;
+- (void)setScreen:(id)arg1;
 
 @end
 

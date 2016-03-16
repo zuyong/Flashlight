@@ -6,9 +6,8 @@
 //  Copyright (c) 2014 Nate Parrott. All rights reserved.
 //
 
+#import <Opee/Opee.h>
 #import "_Flashlight_Bootstrap.h"
-#import "RSSwizzle.h"
-#import "CTBlockDescription.h"
 #import "SPSpotQuery.h"
 #import "NSObject+LogProperties.h"
 #import "SPParsecSimpleResult.h"
@@ -19,6 +18,50 @@ BOOL _Flashlight_Is_10_10_2_Spotlight() {
 }
 
 @class SPQuery;
+
+OPInitialize {
+    @autoreleasepool {
+        [_Flashlight_Bootstrap load]; // initialize the engine, including creating the plugins directory
+    }
+}
+
+ZKSwizzleInterface(_SPSearchPanel, SPSearchPanel, NSPanel)
+@implementation _SPSearchPanel
+
+- (void)collapse {
+    [_FlashlightPluginEngine shared].spotlightWantsCollapsed = YES;
+    if ([[_FlashlightPluginEngine shared] shouldBeCollapsed]) {
+        ZKOrig(void);
+    }
+}
+
+- (void)expand {
+    [_FlashlightPluginEngine shared].spotlightWantsCollapsed = NO;
+    if (![[_FlashlightPluginEngine shared] shouldBeCollapsed]) {
+        ZKOrig(void);
+    }
+}
+
+@end
+
+ZKSwizzleInterface(_SPAppDelegate, SPAppDelegate, NSObject)
+@implementation _SPAppDelegate
+
+- (void)setQuery:(SPSpotQuery *)query {
+    [[_FlashlightPluginEngine shared] setQuery:query.userQueryString];
+    ZKOrig(void, query);
+}
+
+@end
+
+ZKSwizzleInterface(_SPResultViewController, SPResultViewController, NSObject)
+@implementation _SPResultViewController
+
+- (void)setResults:(NSArray *)results {
+    ZKOrig(void, [[_FlashlightPluginEngine shared] mergeFlashlightResultsWithSpotlightResults:results]);
+}
+
+@end
 
 @implementation _Flashlight_Bootstrap
 
@@ -94,6 +137,7 @@ BOOL _Flashlight_Is_10_10_2_Spotlight() {
         }
     });*/
     
+    /* Orignally Uncommented
     RSSwizzleInstanceMethod(NSClassFromString(@"SPAppDelegate"), NSSelectorFromString(@"setQuery:"), RSSWReturnType(void), RSSWArguments(SPSpotQuery* query), RSSWReplacement({
         [[_FlashlightPluginEngine shared] setQuery:query.userQueryString];
         RSSWCallOriginal(query);
@@ -103,11 +147,7 @@ BOOL _Flashlight_Is_10_10_2_Spotlight() {
         RSSWCallOriginal([[_FlashlightPluginEngine shared] mergeFlashlightResultsWithSpotlightResults:results]);
     }), 0, NULL);
     
-    RSSwizzleInstanceMethod(NSClassFromString(@"SPSearchPanel"), NSSelectorFromString(@"collapse"), RSSWReturnType(void), RSSWArguments(), RSSWReplacement({
-        [_FlashlightPluginEngine shared].spotlightWantsCollapsed = YES;
-        if ([[_FlashlightPluginEngine shared] shouldBeCollapsed]) {
-            RSSWCallOriginal();
-        }
+    RSSwizzleInstanceMethod(NSClassFromString(@"SPSearchPanel"), NSSelectorFromString(@"collapse"), RSSWReturnType(void), RSSWArguments
     }), 0, NULL);
     
     RSSwizzleInstanceMethod(NSClassFromString(@"SPSearchPanel"), NSSelectorFromString(@"expand"), RSSWReturnType(void), RSSWArguments(), RSSWReplacement({
@@ -116,10 +156,11 @@ BOOL _Flashlight_Is_10_10_2_Spotlight() {
             RSSWCallOriginal();
         }
     }), 0, NULL);
-    
-    [_FlashlightPluginEngine shared]; // initialize the engine, including creating the plugins directory
+    */
     
     // [[_SS_MetadataResponseDelayer shared] setup];
+    
+    [_FlashlightPluginEngine shared]; // initialize the engine, including creating the plugins directory
 }
 
 @end
