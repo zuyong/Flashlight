@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Nate Parrott. All rights reserved.
 //
 
-#import <Opee/Opee.h>
+#import "ZKSwizzle.h"
 #import "SPOpenAPIResult.h"
 #import "SPQuery.h"
 #import "SPResult.h"

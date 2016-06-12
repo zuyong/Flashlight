@@ -15,7 +15,7 @@
 		5FF5D40E1A675B7D00641D7A /* FlashlightKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF5D4091A675B5300641D7A /* FlashlightKit.framework */; };
 		5FF5D4181A677D9B00641D7A /* FlashlightKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FF5D4091A675B5300641D7A /* FlashlightKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA4550A01C99FA0C007E4F81 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45509F1C99FA0C007E4F81 /* Cocoa.framework */; };
-		FAE3F30F1C99EB890058C7C7 /* Opee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE3F30E1C99EB890058C7C7 /* Opee.framework */; };
+		FB0A88E31D0E1308008C3B82 /* ZKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0A88E21D0E1308008C3B82 /* ZKSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -258,7 +258,8 @@
 		5FC13E701A4E4AA8008A0FE3 /* _FlashlightPluginEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FlashlightPluginEngine.m; sourceTree = "<group>"; };
 		5FF5D4031A675B5300641D7A /* FlashlightKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FlashlightKit.xcodeproj; path = ../FlashlightKit/FlashlightKit.xcodeproj; sourceTree = "<group>"; };
 		FA45509F1C99FA0C007E4F81 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		FAE3F30E1C99EB890058C7C7 /* Opee.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Opee.framework; path = ../../../../../../../../Library/Frameworks/Opee.framework; sourceTree = "<group>"; };
+		FB0A88E11D0E1308008C3B82 /* ZKSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKSwizzle.h; sourceTree = "<group>"; };
+		FB0A88E21D0E1308008C3B82 /* ZKSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKSwizzle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,7 +268,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4550A01C99FA0C007E4F81 /* Cocoa.framework in Frameworks */,
-				FAE3F30F1C99EB890058C7C7 /* Opee.framework in Frameworks */,
 				5FF5D40E1A675B7D00641D7A /* FlashlightKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +279,6 @@
 			isa = PBXGroup;
 			children = (
 				FA45509F1C99FA0C007E4F81 /* Cocoa.framework */,
-				FAE3F30E1C99EB890058C7C7 /* Opee.framework */,
 				5FF5D4031A675B5300641D7A /* FlashlightKit.xcodeproj */,
 				5F5B17431A05757500809207 /* SpotlightSIMBL */,
 				5F5B17421A05757500809207 /* Products */,
@@ -298,6 +297,8 @@
 			isa = PBXGroup;
 			children = (
 				5F5B17441A05757500809207 /* Supporting Files */,
+				FB0A88E11D0E1308008C3B82 /* ZKSwizzle.h */,
+				FB0A88E21D0E1308008C3B82 /* ZKSwizzle.m */,
 				5F5B174B1A05758800809207 /* _Flashlight_Bootstrap.h */,
 				5F5B174C1A05758800809207 /* _Flashlight_Bootstrap.m */,
 				5FC13E6F1A4E4AA8008A0FE3 /* _FlashlightPluginEngine.h */,
@@ -553,7 +554,7 @@
 		5F5B17391A05757400809207 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Nate Parrott";
 				TargetAttributes = {
 					5F5B17401A05757400809207 = {
@@ -621,6 +622,7 @@
 				5F5B174D1A05758800809207 /* _Flashlight_Bootstrap.m in Sources */,
 				5FC13E711A4E4AA8008A0FE3 /* _FlashlightPluginEngine.m in Sources */,
 				5F5B183F1A06CB0000809207 /* SPOpenAPIResult.m in Sources */,
+				FB0A88E31D0E1308008C3B82 /* ZKSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +656,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -712,7 +715,7 @@
 		5F5B17491A05757500809207 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -725,6 +728,7 @@
 				INFOPLIST_FILE = SpotlightSIMBL/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Opee/Extensions/";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nateparrott.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SYMROOT = "$(PROJECT_DIR)/build";
@@ -735,7 +739,7 @@
 		5F5B174A1A05757500809207 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = /;
@@ -749,6 +753,7 @@
 				INFOPLIST_FILE = SpotlightSIMBL/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Opee/Extensions/";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nateparrott.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 				SYMROOT = "$(PROJECT_DIR)/build";

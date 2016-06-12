@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.nateparrott.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -15,21 +15,21 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>17</string>
+	<string>18</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2014 Nate Parrott. All rights reserved.</string>
-	<key>OPFilters</key>
-	<dict>
-		<key>Bundles</key>
-		<array>
-			<string>com.apple.Spotlight</string>
-		</array>
-	</dict>
 	<key>NSPrincipalClass</key>
 	<string>TestPlugin</string>
+	<key>SIMBLTargetApplications</key>
+	<array>
+		<dict>
+			<key>BundleIdentifier</key>
+			<string>com.apple.Spotlight</string>
+		</dict>
+	</array>
 </dict>
 </plist>

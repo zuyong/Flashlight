@@ -6,7 +6,8 @@
 //  Copyright (c) 2014 Nate Parrott. All rights reserved.
 //
 
-#import <Opee/Opee.h>
+@import AppKit;
+#import "ZKSwizzle.h"
 #import "_Flashlight_Bootstrap.h"
 #import "SPSpotQuery.h"
 #import "NSObject+LogProperties.h"
@@ -19,11 +20,11 @@ BOOL _Flashlight_Is_10_10_2_Spotlight() {
 
 @class SPQuery;
 
-OPInitialize {
-    @autoreleasepool {
-        [_Flashlight_Bootstrap load]; // initialize the engine, including creating the plugins directory
-    }
-}
+//OPInitialize {
+//    @autoreleasepool {
+//        [_Flashlight_Bootstrap load]; // initialize the engine, including creating the plugins directory
+//    }
+//}
 
 ZKSwizzleInterface(_SPSearchPanel, SPSearchPanel, NSPanel)
 @implementation _SPSearchPanel
