@@ -84,6 +84,7 @@
 		6C56449B159E7C0900215467 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C564499159E7C0900215467 /* MainMenu.xib */; };
 		6C5644B8159E7D3900215467 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C5644B7159E7D3900215467 /* ServiceManagement.framework */; };
 		CB91ECF0DC65EF541475B8F4 /* libPods-Flashlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0435914AADD746D7BD448E6F /* libPods-Flashlight.a */; };
+		FB8B898E1D0E57A300E68B38 /* SpotlightSIMBL.bundle in Copy Bundle */ = {isa = PBXBuildFile; fileRef = FB8B898D1D0E57A300E68B38 /* SpotlightSIMBL.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -115,6 +116,17 @@
 				5F8CCECE1AD3A660009D200E /* largetext.bundle in Copy Starter Pack */,
 			);
 			name = "Copy Starter Pack";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB8B898C1D0E579700E68B38 /* Copy Bundle */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				FB8B898E1D0E57A300E68B38 /* SpotlightSIMBL.bundle in Copy Bundle */,
+			);
+			name = "Copy Bundle";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -274,6 +286,7 @@
 		95C8E06B1A47026100C9FB0A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		95C8E06C1A47026100C9FB0A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E28AC1DF1A23D21D00673B7C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FB8B898D1D0E57A300E68B38 /* SpotlightSIMBL.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SpotlightSIMBL.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -453,6 +466,7 @@
 		6C564475159E7C0800215467 = {
 			isa = PBXGroup;
 			children = (
+				FB8B898D1D0E57A300E68B38 /* SpotlightSIMBL.bundle */,
 				6C6AF45E1842DE3700E2ACBB /* README.md */,
 				6C56448A159E7C0800215467 /* FlashlightApp */,
 				6C564483159E7C0800215467 /* Frameworks */,
@@ -550,6 +564,7 @@
 				6C56447D159E7C0800215467 /* Frameworks */,
 				6C56447E159E7C0800215467 /* Resources */,
 				5F8CCEA81AD3A555009D200E /* Copy Starter Pack */,
+				FB8B898C1D0E579700E68B38 /* Copy Bundle */,
 				600691463A7845E1B87A281D /* Copy Pods Resources */,
 				4A19B4D30188DB65DBE9ADE8 /* Embed Pods Frameworks */,
 			);

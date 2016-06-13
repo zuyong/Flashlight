@@ -172,27 +172,49 @@
     NSString *fullSpotlightVersion = [[NSBundle bundleWithPath:[[NSWorkspace sharedWorkspace] fullPathForApplication:@"Spotlight"]] infoDictionary][@"CFBundleVersion"];
     NSString *spotlightVersion = [fullSpotlightVersion componentsSeparatedByString:@"."][0];
     NSLog(@"DetectedSpotlightVersion: %@", spotlightVersion);
-    if (![@[@"911", @"916", @"917"] containsObject:spotlightVersion]) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            
-            NSAlert *alert = [[NSAlert alloc] init];
-            [alert setMessageText:@"Flashlight doesn't work with your version of Spotlight."];
-            [alert addButtonWithTitle:@"Okay"]; // FirstButton, rightmost button
-            [alert addButtonWithTitle:@"Check for updates"]; // SecondButton
-            [alert setInformativeText:[NSString stringWithFormat:NSLocalizedString(@"As a precaution, plugins won't run on unsupported versions of Spotlight, even if you enable them. (You have Spotlight v%@)", @""), spotlightVersion]];
-            alert.alertStyle = NSCriticalAlertStyle;
-            NSModalResponse resp = [alert runModal];
-            if (resp == NSAlertSecondButtonReturn) {
-                [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://github.com/nate-parrott/flashlight"]];
-            }
-            
-        });
+//    if (![@[@"911", @"916", @"917"] containsObject:spotlightVersion]) {
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            
+//            NSAlert *alert = [[NSAlert alloc] init];
+//            [alert setMessageText:@"Flashlight doesn't work with your version of Spotlight."];
+//            [alert addButtonWithTitle:@"Okay"]; // FirstButton, rightmost button
+//            [alert addButtonWithTitle:@"Check for updates"]; // SecondButton
+//            [alert setInformativeText:[NSString stringWithFormat:NSLocalizedString(@"As a precaution, plugins won't run on unsupported versions of Spotlight, even if you enable them. (You have Spotlight v%@)", @""), spotlightVersion]];
+//            alert.alertStyle = NSCriticalAlertStyle;
+//            NSModalResponse resp = [alert runModal];
+//            if (resp == NSAlertSecondButtonReturn) {
+//                [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://github.com/nate-parrott/flashlight"]];
+//            }
+//            
+//        });
+//    }
+    
+    NSError *error = nil;
+    NSString *srcPath = [[NSBundle mainBundle] pathForResource:@"SpotlightSIMBL" ofType:@"bundle"];
+    NSString *dstPath = @"/Library/Application Support/SIMBL/Plugins/SpotlightSIMBL.bundle";
+    NSString *srcBndl = [[NSBundle mainBundle] pathForResource:@"SpotlightSIMBL.bundle/Contents/Info" ofType:@"plist"];
+    NSString *dstBndl = @"/Library/Application Support/SIMBL/Plugins/SpotlightSIMBL.bundle/Contents/Info.plist";
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:dstBndl]){
+        NSString *srcVer = [[[NSMutableDictionary alloc] initWithContentsOfFile:srcBndl] objectForKey:@"CFBundleVersion"];
+        NSString *dstVer = [[[NSMutableDictionary alloc] initWithContentsOfFile:dstBndl] objectForKey:@"CFBundleVersion"];
+        if (![srcVer isEqual:dstVer] && ![srcPath isEqualToString:@""])
+        {
+            NSLog(@"\nSource: %@\nDestination: %@", srcVer, dstVer);
+            [[NSFileManager defaultManager] removeItemAtPath:@"/tmp/SpotlightSIMBL.bundle" error:&error];
+            [[NSFileManager defaultManager] copyItemAtPath:srcPath toPath:@"/tmp/SpotlightSIMBL.bundle" error:&error];
+            [[NSFileManager defaultManager] replaceItemAtURL:[NSURL fileURLWithPath:dstPath] withItemAtURL:[NSURL fileURLWithPath:@"/tmp/SpotlightSIMBL.bundle"] backupItemName:nil options:NSFileManagerItemReplacementUsingNewMetadataOnly resultingItemURL:nil error:&error];
+            system("killall Spotlight; sleep 1; osascript -e 'tell application \"Spotlight\" to inject SIMBL into Snow Leopard'");
+        }
+    } else {
+        [[NSFileManager defaultManager] copyItemAtPath:srcPath toPath:dstPath error:&error];
+        system("killall Spotlight; sleep 1; osascript -e 'tell application \"Spotlight\" to inject SIMBL into Snow Leopard'");
     }
 }
 
 #pragma mark About Window actions
 - (IBAction)openGithub:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/nate-parrott/Flashlight"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/w0lfschild/Flashlight"]];
 }
 - (IBAction)leaveFeedback:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://flashlight.nateparrott.com/feedback"]];
