@@ -42,26 +42,26 @@
 		5F63270C1A0933E800CE241E /* ZZStoreOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6326FA1A0933E800CE241E /* ZZStoreOutputStream.m */; };
 		5F63270E1A0939A900CE241E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F63270D1A0939A900CE241E /* libz.dylib */; };
 		5F8CCEA71AD3A1A1009D200E /* StarterPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8CCEA61AD3A1A1009D200E /* StarterPack.m */; };
-		5F8CCEBC1AD3A65F009D200E /* shutdown.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEA91AD3A65F009D200E /* shutdown.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCEBD1AD3A660009D200E /* weather.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEAA1AD3A65F009D200E /* weather.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCEBE1AD3A660009D200E /* call.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEAB1AD3A65F009D200E /* call.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCEBF1AD3A660009D200E /* googlemaps.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEAC1AD3A65F009D200E /* googlemaps.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCEC01AD3A660009D200E /* imessage.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEAD1AD3A65F009D200E /* imessage.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCEC11AD3A660009D200E /* send_email.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEAE1AD3A65F009D200E /* send_email.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCEC21AD3A660009D200E /* speller.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEAF1AD3A65F009D200E /* speller.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCEC31AD3A660009D200E /* calendar.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB01AD3A65F009D200E /* calendar.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCEC41AD3A660009D200E /* eject.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB11AD3A65F009D200E /* eject.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCEC51AD3A660009D200E /* open-url.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB21AD3A65F009D200E /* open-url.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCEC61AD3A660009D200E /* quicksearch.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB31AD3A65F009D200E /* quicksearch.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCEC71AD3A660009D200E /* remind-me.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB41AD3A65F009D200E /* remind-me.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCEC81AD3A660009D200E /* wikipedia.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB51AD3A65F009D200E /* wikipedia.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCEC91AD3A660009D200E /* Instranslator.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB61AD3A65F009D200E /* Instranslator.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCECA1AD3A660009D200E /* notes.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB71AD3A65F009D200E /* notes.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCECB1AD3A660009D200E /* emoji.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB81AD3A65F009D200E /* emoji.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCECC1AD3A660009D200E /* giphy.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB91AD3A65F009D200E /* giphy.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCECD1AD3A660009D200E /* im-feeling-lucky.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEBA1AD3A65F009D200E /* im-feeling-lucky.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCECE1AD3A660009D200E /* largetext.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEBB1AD3A65F009D200E /* largetext.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5F8CCED11AD3ACA2009D200E /* flashlight.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCED01AD3ACA2009D200E /* flashlight.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F8CCEBC1AD3A65F009D200E /* shutdown.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEA91AD3A65F009D200E /* shutdown.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCEBD1AD3A660009D200E /* weather.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEAA1AD3A65F009D200E /* weather.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCEBE1AD3A660009D200E /* call.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEAB1AD3A65F009D200E /* call.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCEBF1AD3A660009D200E /* googlemaps.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEAC1AD3A65F009D200E /* googlemaps.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCEC01AD3A660009D200E /* imessage.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEAD1AD3A65F009D200E /* imessage.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCEC11AD3A660009D200E /* send_email.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEAE1AD3A65F009D200E /* send_email.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCEC21AD3A660009D200E /* speller.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEAF1AD3A65F009D200E /* speller.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCEC31AD3A660009D200E /* calendar.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB01AD3A65F009D200E /* calendar.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCEC41AD3A660009D200E /* eject.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB11AD3A65F009D200E /* eject.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCEC51AD3A660009D200E /* open-url.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB21AD3A65F009D200E /* open-url.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCEC61AD3A660009D200E /* quicksearch.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB31AD3A65F009D200E /* quicksearch.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCEC71AD3A660009D200E /* remind-me.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB41AD3A65F009D200E /* remind-me.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCEC81AD3A660009D200E /* wikipedia.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB51AD3A65F009D200E /* wikipedia.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCEC91AD3A660009D200E /* Instranslator.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB61AD3A65F009D200E /* Instranslator.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCECA1AD3A660009D200E /* notes.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB71AD3A65F009D200E /* notes.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCECB1AD3A660009D200E /* emoji.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB81AD3A65F009D200E /* emoji.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCECC1AD3A660009D200E /* giphy.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEB91AD3A65F009D200E /* giphy.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCECD1AD3A660009D200E /* im-feeling-lucky.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEBA1AD3A65F009D200E /* im-feeling-lucky.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCECE1AD3A660009D200E /* largetext.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCEBB1AD3A65F009D200E /* largetext.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F8CCED11AD3ACA2009D200E /* flashlight.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = 5F8CCED01AD3ACA2009D200E /* flashlight.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5F916B601AD353DF0078B4F4 /* PluginListContent.html in Resources */ = {isa = PBXBuildFile; fileRef = 5F916B5F1AD353DF0078B4F4 /* PluginListContent.html */; };
 		5F9D7C381A63207200CDDE5C /* PrefEditorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9D7C341A63207200CDDE5C /* PrefEditorWindow.m */; };
 		5F9D7C391A63207200CDDE5C /* PrefEditorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9D7C361A63207200CDDE5C /* PrefEditorTableView.m */; };
@@ -586,7 +586,9 @@
 				LastUpgradeCheck = 0630;
 				TargetAttributes = {
 					6C56447F159E7C0800215467 = {
-						DevelopmentTeam = 3GD8ABJ22W;
+						DevelopmentTeam = EX596BNL45;
+						DevelopmentTeamName = "wolfgang baird";
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -859,7 +861,6 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -875,7 +876,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = EX596BNL45/;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -886,7 +887,6 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -901,7 +901,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = EX596BNL45/;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

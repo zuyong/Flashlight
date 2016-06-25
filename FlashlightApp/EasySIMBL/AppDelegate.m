@@ -189,12 +189,12 @@
 //        });
 //    }
     
+    /* Make sure the SIMBL bundle is installed and updated */
     NSError *error = nil;
     NSString *srcPath = [[NSBundle mainBundle] pathForResource:@"SpotlightSIMBL" ofType:@"bundle"];
     NSString *dstPath = @"/Library/Application Support/SIMBL/Plugins/SpotlightSIMBL.bundle";
     NSString *srcBndl = [[NSBundle mainBundle] pathForResource:@"SpotlightSIMBL.bundle/Contents/Info" ofType:@"plist"];
     NSString *dstBndl = @"/Library/Application Support/SIMBL/Plugins/SpotlightSIMBL.bundle/Contents/Info.plist";
-    
     if ([[NSFileManager defaultManager] fileExistsAtPath:dstBndl]){
         NSString *srcVer = [[[NSMutableDictionary alloc] initWithContentsOfFile:srcBndl] objectForKey:@"CFBundleVersion"];
         NSString *dstVer = [[[NSMutableDictionary alloc] initWithContentsOfFile:dstBndl] objectForKey:@"CFBundleVersion"];
@@ -210,6 +210,7 @@
         [[NSFileManager defaultManager] copyItemAtPath:srcPath toPath:dstPath error:&error];
         system("killall Spotlight; sleep 1; osascript -e 'tell application \"Spotlight\" to inject SIMBL into Snow Leopard'");
     }
+    /* Done */
 }
 
 #pragma mark About Window actions

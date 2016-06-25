@@ -1,9 +1,7 @@
-Flashlight (for 10.10+) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nate-parrott/Flashlight?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Flashlight (for macOS 10.10 and above) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nate-parrott/Flashlight?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ==========
 
 Flashlight is an **unofficial Spotlight API** that allows you to programmatically process queries and add additional results.
-
-![Example](https://raw.github.com/nate-parrott/flashlight/master/Image.png)
 
 Installation
 ------------
@@ -14,6 +12,11 @@ Installation
 4. Open `mySIMBL.app` and install SIMBL
 5. Open `Flashlight.app` and install the plugins you want to use
 5. Start using _Flashlight_
+
+Example
+-------
+
+![Example](https://raw.github.com/nate-parrott/flashlight/master/Image.png)
 
 Writing Plugins
 ---------------
@@ -32,10 +35,9 @@ We welcome all contributions to the Flashlight core and plugins. See [the wiki](
 Credits
 -------
 
-- [alexzielenski](https://github.com/alexzielenski) - [10.10+ Opee support](https://github.com/alexzielenski/Flashlight)
-- [w0lfschild](https://github.com/w0lfschild) - [10.10+ SIMBL support](https://github.com/w0lfschild/Flashlight)
-- [iluuu1994](https://github.com/iluuu1994) - [ITSwitch](https://github.com/iluuu1994/ITSwitch)
-- [pixelglow)](https://github.com/pixelglow) - [ZipZap](https://github.com/pixelglow/zipzap)
+- [nate-parrott](https://github.com/nate-parrott) - [Original Flashlight](https://github.com/nate-parrott/Flashlight)
+- [alexzielenski](https://github.com/alexzielenski) - [macOS 10.10+ Opee support](https://github.com/alexzielenski/Flashlight)
+- [w0lfschild](https://github.com/w0lfschild) - [macOS 10.10+ support](https://github.com/w0lfschild/Flashlight)
 
 
 Translations
