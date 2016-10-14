@@ -68,8 +68,7 @@ def run(command):
         ascript = ascript_currentdir + '''
         tell application "Terminal"
             activate
-            do script "cd " & dir
-            do script {0} in front window
+            do script "cd " & dir & "; " & {0}
         end tell
         '''.format(asquote(command))
     else:
@@ -81,8 +80,7 @@ def run(command):
                     activate current session
                     launch session "Default Session"
                     tell the last session
-                        write text "cd " & dir
-                        write text {0}
+                        write text "cd " & dir & "; " & {0}
                     end tell
             end tell
         end tell
