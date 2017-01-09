@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<script>
+	var sub = "<!--SUB-->";
+	var tag = "<!--TAG-->";
+	function load()
+	{
+		var url = "https://webref.ru/" + encodeURIComponent(sub) + '/' + encodeURIComponent(tag);
+		setTimeout(function() {
+      window.location.href = url;
+    }, 500);
+	}
+	load();
+	</script>
+<style>
+div.loading
+{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+	line-height: 5;
+	position: relative;
+	text-align: center;
+	font-size:50px;
+}
+</style>
+</head>
+<body>
+	<div class="loading">Loading</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+    "name": "webref",
+    "displayName": "WebReference",
+    "description": "Search using WebReference",
+    "examples": ["css text-align", "html div"],
+    "categories": ["Developer"],
+    "creator_name": "anVlad11",
+    "creator_url": "https://twiitter.com/anvlad11"
+}
