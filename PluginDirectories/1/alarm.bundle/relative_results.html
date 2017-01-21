@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    #results {
+      background-color: #fff;
+      color: #030303;
+      font-family: arial;
+      padding: 10px;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.80);
+    }
+    #icon {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #time, #message {
+      font-size: 22px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <div id="results">
+      <img src="Icon.png" id="icon">
+      <p id="time"></p>
+      <q id="message"></q>
+    </div>
+  </center>
+  <script>
+    var time_span = $time_span;
+    var text_time_span = "$text_time_span";
+    document.getElementById("time").innerText = "Sound an alarm in " + text_time_span;
+    var message = "$message";
+    if (message) {
+      document.getElementById("message").innerText = message;
+      document.getElementById("time").innerText += ":";
+    } else {
+      document.getElementById("message").outerHTML = "";
+      document.getElementById("time").innerText += ".";
+    }
+  </script>
+</body>
+</html>
+
