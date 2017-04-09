@@ -296,7 +296,6 @@
 		5F5B17431A05757500809207 /* SpotlightSIMBL */ = {
 			isa = PBXGroup;
 			children = (
-				5F5B17441A05757500809207 /* Supporting Files */,
 				FB0A88E11D0E1308008C3B82 /* ZKSwizzle.h */,
 				FB0A88E21D0E1308008C3B82 /* ZKSwizzle.m */,
 				5F5B174B1A05758800809207 /* _Flashlight_Bootstrap.h */,
@@ -308,6 +307,7 @@
 				5F5B183A1A06C6EE00809207 /* NSObject+LogProperties.h */,
 				5F5B183B1A06C6EE00809207 /* NSObject+LogProperties.m */,
 				5F5B18431A07197500809207 /* SPOpenAPIPreviewViewController.xib */,
+				5F5B17441A05757500809207 /* Supporting Files */,
 				5F5B17511A057AB100809207 /* SpotlightHeaders */,
 			);
 			path = SpotlightSIMBL;

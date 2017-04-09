@@ -506,7 +506,6 @@
 		6C56448A159E7C0800215467 /* FlashlightApp */ = {
 			isa = PBXGroup;
 			children = (
-				5FF5D4141A67778000641D7A /* Models */,
 				6C564496159E7C0900215467 /* AppDelegate.h */,
 				6C564497159E7C0900215467 /* AppDelegate.m */,
 				5F8CCEA51AD3A1A1009D200E /* StarterPack.h */,
@@ -517,13 +516,14 @@
 				5F8CCEA61AD3A1A1009D200E /* StarterPack.m */,
 				5F5C4E951AD25C6B00D1D883 /* PluginList.html */,
 				5F916B5F1AD353DF0078B4F4 /* PluginListContent.html */,
-				5F8CCECF1AD3A68A009D200E /* Starter Pack */,
-				5FF5D4151A67778C00641D7A /* Categories */,
-				6C564499159E7C0900215467 /* MainMenu.xib */,
-				5FF5D4161A6777A000641D7A /* Windows */,
-				5F60B0FD1A196562004BCF08 /* WorkflowTemplate.bundle */,
 				5FBEC9B51A154DEA007FEC54 /* Icons.xcassets */,
 				5FD3504D1A840EF2001E0380 /* Icon.icns */,
+				5F60B0FD1A196562004BCF08 /* WorkflowTemplate.bundle */,
+				6C564499159E7C0900215467 /* MainMenu.xib */,
+				5FF5D4141A67778000641D7A /* Models */,
+				5F8CCECF1AD3A68A009D200E /* Starter Pack */,
+				5FF5D4151A67778C00641D7A /* Categories */,
+				5FF5D4161A6777A000641D7A /* Windows */,
 				5F6326CE1A0933E800CE241E /* zipzap */,
 				5F6326B61A082FA900CE241E /* ITSwitch */,
 				6C56448B159E7C0800215467 /* Supporting Files */,

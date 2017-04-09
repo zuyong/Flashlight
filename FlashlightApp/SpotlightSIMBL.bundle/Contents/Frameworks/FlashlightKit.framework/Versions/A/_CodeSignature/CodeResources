@@ -10,7 +10,7 @@
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		yEK7YaCjaRO6XjNm3oEHYg4xdc4=
+		NeFBf6D7f/O/7rE14zcPwNkd9T0=
 		</data>
 		<key>Resources/invoke_plugin.py</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Resources/invoke_plugin.pyc</key>
 		<data>
-		gvUX1Q5UWdfZ/KCZ/LjPIdztS1k=
+		424Wa7Ux1dd84D5tim30xY46kHw=
 		</data>
 		<key>Resources/run_plugin.py</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Resources/run_plugin.pyc</key>
 		<data>
-		UFSwBOzRnoZaq8js+YE3kmkUQio=
+		7tnixJs87T/kCBsg3ThDDhm4I+A=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -189,11 +189,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yEK7YaCjaRO6XjNm3oEHYg4xdc4=
+			NeFBf6D7f/O/7rE14zcPwNkd9T0=
 			</data>
 			<key>hash2</key>
 			<data>
-			K2V8ewMDwBURqayJDutMHTtfEvzazRm/hP+7N2gMBvA=
+			xcMBnTeBc0od/YcEkqICkULJj3q9tXL1SplLe/nE9nA=
 			</data>
 		</dict>
 		<key>Resources/invoke_plugin.py</key>
@@ -211,11 +211,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gvUX1Q5UWdfZ/KCZ/LjPIdztS1k=
+			424Wa7Ux1dd84D5tim30xY46kHw=
 			</data>
 			<key>hash2</key>
 			<data>
-			cd+cweBdHrOMFQfGOaLa89cIuh7nRMbAiKhuzGRaka8=
+			9YjUQ+cF8jkmqKIa95E+Nu7zwuAhQ1CV7NGZjvVczV0=
 			</data>
 		</dict>
 		<key>Resources/run_plugin.py</key>
@@ -233,11 +233,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UFSwBOzRnoZaq8js+YE3kmkUQio=
+			7tnixJs87T/kCBsg3ThDDhm4I+A=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ah/e7ys08C0Oz73HPGPoyqklSoH9opTF1t0Xrnt4MYw=
+			m9lEsDQES/63A7SxMI4NYHZ90og68Mgj7XyPDBSTabg=
 			</data>
 		</dict>
 	</dict>
@@ -258,6 +258,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Resources/Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^version.plist$</key>
 		<true/>
@@ -317,6 +322,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Resources/Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^[^/]+$</key>
 		<dict>
