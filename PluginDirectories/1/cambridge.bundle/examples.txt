@@ -1,4 +1,0 @@
-cd
-cd ~query(looking phrases)
-cambridge ~query(looking phrases)
-cambridge

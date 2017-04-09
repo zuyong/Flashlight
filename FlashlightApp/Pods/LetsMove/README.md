@@ -3,19 +3,36 @@ LetsMove
 
 A sample project that demonstrates how to move a running Mac OS X application to the Applications folder.
 
+![Screenshot](http://i.imgur.com/euTRZiI.png)
+
+
+Requirements
+------------
+Builds and runs on Mac OS X 10.6 or higher. Does NOT support sandboxed applications.
+
+
 Usage
 -----
+
+Option 1:
+
+Build then embed LetsMove.framework into your app.
+
+Option 2:
 
 Copy the following files into your project:
 
 - PFMoveApplication.h
 - PFMoveApplication.m
 
-In your app delegate's "-[applicationWillFinishLaunching:]" method, call the PFMoveToApplicationsFolderIfNecessary function at the very top.
-
 If your project has ARC enabled, you'll want to disable ARC on the above files. You can do so by adding -fno-objc-arc compiler flag to your PFMoveApplication.m source file. See http://stackoverflow.com/questions/6646052/how-can-i-disable-arc-for-a-single-file-in-a-project/6658549#6658549
 
 If your application is localized, also copy the 'MoveApplication.string' files into your project.
+
+Link your application against Security.framework.
+
+In your app delegate's "-[applicationWillFinishLaunching:]" method, call the PFMoveToApplicationsFolderIfNecessary function at the very top.
+
 
 License
 -------
@@ -25,6 +42,27 @@ Public domain
 
 Version History
 ---------------
+
+* 1.22
+	- Fix not deleting or trashing itself after copying to /Applications in macOS Sierra
+
+* 1.21
+	- Support for [Carthage](https://github.com/Carthage/Carthage) added
+	- Project now support OS X 10.6 and higher
+
+* 1.20
+	- Support for applications bundled inside another application
+	- Brazilian Portuguese localization slightly updated
+	- Build warnings fixed
+
+* 1.19
+	- Slovak localization added
+
+* 1.18
+	- Catalan localization added
+
+* 1.17
+	- Tranditional Chinese localization added.
 
 * 1.16
 	- Deprecation warning that appears when minimum deployment target is set to OS X 10.10 taken care of
@@ -115,11 +153,6 @@ Version History
 	- First release
 
 
-Requirements
-------------
-Builds and runs on Mac OS X 10.5 or higher.
-
-
 Code Contributors:
 -------------
 * Andy Kim
@@ -132,6 +165,8 @@ Code Contributors:
 * Whitney Young
 * Nick Moore
 * Nicholas Riley
+* Matt Prowse
+
 
 Translators:
 ------------
@@ -145,11 +180,15 @@ Translators:
 * Marco Improda (Italian)
 * Venj Chu (Simplified Chinese)
 * Sérgio Miranda (European Portuguese)
-* Victor Figueiredo (Brazilian Portuguese)
+* Victor Figueiredo and BR Lingo (Brazilian Portuguese)
 * AppLingua (Korean)
 * Czech X Team (Czech)
 * Marek Telecki (Polish)
 * Petar Vlahu (Macedonian)
 * Václav Slavík (Hungarian, Serbian, and Turkish)
 * Erik Vikström (Swedish)
+* Inndy Lin (Traditional Chinese)
+* aONe (Catalan)
+* Marek Hrusovsky (Slovak)
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)

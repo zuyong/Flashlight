@@ -1,9 +1,0 @@
-{
-    "name": „wolframalpha“,
-    "displayName": „WolframAlpha",
-
-    "description": "Search WolframAlpha (wa)“,
-
-    "examples": ["wa 3*x=6“, „wolfram population germany“, „wa e^pi“],
-    "categories": ["Search", "Information", "Featured"]
-}

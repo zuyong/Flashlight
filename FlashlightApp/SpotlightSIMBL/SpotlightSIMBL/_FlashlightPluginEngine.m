@@ -124,7 +124,13 @@
     
     [topHitItems insertObjects:pluginTopHits atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, pluginTopHits.count)]];
     if (pluginNonTopHits.count) {
-        [pluginNonTopHits insertObject:[[NSClassFromString(@"SPGroupHeadingResult") alloc] initWithDisplayName:@"FLASHLIGHT" focusString:nil] atIndex:0];
+        if ([NSClassFromString(@"SPGroupHeadingResult") instancesRespondToSelector:@selector(initWithDisplayName:focusString:)]) {
+            [pluginNonTopHits insertObject:[[NSClassFromString(@"SPGroupHeadingResult") alloc] initWithDisplayName:@"FLASHLIGHT" focusString:nil] atIndex:0];
+        } else if ([NSClassFromString(@"SPGroupHeadingResult") instancesRespondToSelector:@selector(initWithDisplayName:keyID:focusString:)]) {
+            [pluginNonTopHits insertObject:[[NSClassFromString(@"SPGroupHeadingResult") alloc] initWithDisplayName:@"FLASHLIGHT" keyID:nil focusString:nil] atIndex:0];
+        } else {
+            NSLog(@"SPGroupHeadingResult header seems to have changed ☠️");
+        }
         [mainResults insertObjects:pluginNonTopHits atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, pluginNonTopHits.count)]];
     }
     

@@ -1,9 +1,9 @@
 PODS:
-  - GRMustache (7.3.1):
+  - GRMustache (7.3.2):
     - JRSwizzle (~> 1.0)
   - JRSwizzle (1.0)
-  - LetsMove (1.16)
-  - Sparkle (1.8.0)
+  - LetsMove (1.22)
+  - Sparkle (1.16.0)
 
 DEPENDENCIES:
   - GRMustache
@@ -11,9 +11,11 @@ DEPENDENCIES:
   - Sparkle
 
 SPEC CHECKSUMS:
-  GRMustache: 9a272c3231844aa7071008d5493d7d80067c2fdd
+  GRMustache: ebe6104fd30a6d22c1f36af131e19e2dbf7cd292
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
-  LetsMove: c70420fc27ca466717b82eb52fabd7e4dfd40017
-  Sparkle: 3adb45d38bcdf80caf505f2b4cd693031db70835
+  LetsMove: 407d4d14815e6dc1549b6a9fe8e4b0f6aed3e305
+  Sparkle: 57650c525b8922b1ef72021f9d92287fc7d5d6f0
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: ef1ae53ad46d4b77c76cf6546c6776c2900b6c90
+
+COCOAPODS: 1.2.0

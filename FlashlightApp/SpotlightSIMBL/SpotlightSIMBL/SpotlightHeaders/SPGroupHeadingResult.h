@@ -17,6 +17,7 @@
 - (BOOL)isSelectable;
 - (id)description;
 - (id)initWithDisplayName:(id)arg1 focusString:(id)arg2;
+- (id)initWithDisplayName:(id)arg1 keyID:(id)arg2 focusString:(id)arg3;
 
 @end
 

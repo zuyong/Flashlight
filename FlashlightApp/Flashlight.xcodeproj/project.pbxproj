@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30AF32A25F89BB482266017E /* libPods-Flashlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F301218945FC13823731C49D /* libPods-Flashlight.a */; };
 		5F2B37751A3E42E500AC2C19 /* SearchPluginEditorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B37731A3E42E500AC2C19 /* SearchPluginEditorWindowController.m */; };
 		5F2B37761A3E42E500AC2C19 /* SearchPluginEditorWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F2B37741A3E42E500AC2C19 /* SearchPluginEditorWindowController.xib */; };
 		5F3878131AC2527C0003363D /* PluginInstallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F3878121AC2527C0003363D /* PluginInstallManager.m */; };
@@ -83,7 +84,7 @@
 		6C564498159E7C0900215467 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C564497159E7C0900215467 /* AppDelegate.m */; };
 		6C56449B159E7C0900215467 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C564499159E7C0900215467 /* MainMenu.xib */; };
 		6C5644B8159E7D3900215467 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C5644B7159E7D3900215467 /* ServiceManagement.framework */; };
-		CB91ECF0DC65EF541475B8F4 /* libPods-Flashlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0435914AADD746D7BD448E6F /* libPods-Flashlight.a */; };
+		FB24C0271E5B0A39009C523B /* alarm.bundle in Copy Starter Pack */ = {isa = PBXBuildFile; fileRef = FB24C0261E5B0A39009C523B /* alarm.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FB8B898E1D0E57A300E68B38 /* SpotlightSIMBL.bundle in Copy Bundle */ = {isa = PBXBuildFile; fileRef = FB8B898D1D0E57A300E68B38 /* SpotlightSIMBL.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 				5F8CCEC61AD3A660009D200E /* quicksearch.bundle in Copy Starter Pack */,
 				5F8CCEC71AD3A660009D200E /* remind-me.bundle in Copy Starter Pack */,
 				5F8CCEC81AD3A660009D200E /* wikipedia.bundle in Copy Starter Pack */,
+				FB24C0271E5B0A39009C523B /* alarm.bundle in Copy Starter Pack */,
 				5F8CCEC91AD3A660009D200E /* Instranslator.bundle in Copy Starter Pack */,
 				5F8CCECA1AD3A660009D200E /* notes.bundle in Copy Starter Pack */,
 				5F8CCECB1AD3A660009D200E /* emoji.bundle in Copy Starter Pack */,
@@ -132,9 +134,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0435914AADD746D7BD448E6F /* libPods-Flashlight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Flashlight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		05413329E3C2229FC2FE2736 /* Pods-Flashlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flashlight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flashlight/Pods-Flashlight.debug.xcconfig"; sourceTree = "<group>"; };
-		406B089D37D45E210BD6A866 /* Pods-Flashlight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flashlight.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flashlight/Pods-Flashlight.release.xcconfig"; sourceTree = "<group>"; };
+		1A17445B392804CE3CB1AE6B /* Pods-Flashlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flashlight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flashlight/Pods-Flashlight.debug.xcconfig"; sourceTree = "<group>"; };
 		5F11C2FD1A2B0834005A1731 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5F2B37721A3E42E500AC2C19 /* SearchPluginEditorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPluginEditorWindowController.h; sourceTree = "<group>"; };
 		5F2B37731A3E42E500AC2C19 /* SearchPluginEditorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPluginEditorWindowController.m; sourceTree = "<group>"; };
@@ -286,6 +286,9 @@
 		95C8E06B1A47026100C9FB0A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		95C8E06C1A47026100C9FB0A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E28AC1DF1A23D21D00673B7C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F301218945FC13823731C49D /* libPods-Flashlight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Flashlight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB24C0261E5B0A39009C523B /* alarm.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = alarm.bundle; sourceTree = "<group>"; };
+		FB8706281AB8B45D8405C11C /* Pods-Flashlight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flashlight.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flashlight/Pods-Flashlight.release.xcconfig"; sourceTree = "<group>"; };
 		FB8B898D1D0E57A300E68B38 /* SpotlightSIMBL.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SpotlightSIMBL.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -299,22 +302,13 @@
 				5F6326C21A083A1300CE241E /* QuartzCore.framework in Frameworks */,
 				6C564485159E7C0800215467 /* Cocoa.framework in Frameworks */,
 				6C5644B8159E7D3900215467 /* ServiceManagement.framework in Frameworks */,
-				CB91ECF0DC65EF541475B8F4 /* libPods-Flashlight.a in Frameworks */,
+				30AF32A25F89BB482266017E /* libPods-Flashlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D07F88819769AEE8184951D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				05413329E3C2229FC2FE2736 /* Pods-Flashlight.debug.xcconfig */,
-				406B089D37D45E210BD6A866 /* Pods-Flashlight.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		5F6326B61A082FA900CE241E /* ITSwitch */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +374,7 @@
 		5F8CCECF1AD3A68A009D200E /* Starter Pack */ = {
 			isa = PBXGroup;
 			children = (
+				FB24C0261E5B0A39009C523B /* alarm.bundle */,
 				5F8CCED01AD3ACA2009D200E /* flashlight.bundle */,
 				5F8CCEA91AD3A65F009D200E /* shutdown.bundle */,
 				5F8CCEAA1AD3A65F009D200E /* weather.bundle */,
@@ -471,7 +466,7 @@
 				6C56448A159E7C0800215467 /* FlashlightApp */,
 				6C564483159E7C0800215467 /* Frameworks */,
 				6C564481159E7C0800215467 /* Products */,
-				3D07F88819769AEE8184951D /* Pods */,
+				7F8C17DC0BAA08F1FB6A0F80 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -493,7 +488,7 @@
 				6C5644B7159E7D3900215467 /* ServiceManagement.framework */,
 				6C564486159E7C0800215467 /* Other Frameworks */,
 				653963C51A2766CD00D8F6E9 /* libPods-Flashlight.a */,
-				0435914AADD746D7BD448E6F /* libPods-Flashlight.a */,
+				F301218945FC13823731C49D /* libPods-Flashlight.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -515,11 +510,11 @@
 				6C564496159E7C0900215467 /* AppDelegate.h */,
 				6C564497159E7C0900215467 /* AppDelegate.m */,
 				5F8CCEA51AD3A1A1009D200E /* StarterPack.h */,
-				5F8CCEA61AD3A1A1009D200E /* StarterPack.m */,
 				5F6326BB1A0830F700CE241E /* PluginListController.h */,
 				5F6326BC1A0830F700CE241E /* PluginListController.m */,
 				5F5C4E921AD25A9C00D1D883 /* InstalledPluginListRenderer.h */,
 				5F5C4E931AD25A9C00D1D883 /* InstalledPluginListRenderer.m */,
+				5F8CCEA61AD3A1A1009D200E /* StarterPack.m */,
 				5F5C4E951AD25C6B00D1D883 /* PluginList.html */,
 				5F916B5F1AD353DF0078B4F4 /* PluginListContent.html */,
 				5F8CCECF1AD3A68A009D200E /* Starter Pack */,
@@ -552,6 +547,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7F8C17DC0BAA08F1FB6A0F80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A17445B392804CE3CB1AE6B /* Pods-Flashlight.debug.xcconfig */,
+				FB8706281AB8B45D8405C11C /* Pods-Flashlight.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -559,14 +563,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C56449E159E7C0900215467 /* Build configuration list for PBXNativeTarget "Flashlight" */;
 			buildPhases = (
-				EF47F4946C894649ADC3835C /* Check Pods Manifest.lock */,
+				1DD9FD19E7AF111012155576 /* [CP] Check Pods Manifest.lock */,
 				6C56447C159E7C0800215467 /* Sources */,
 				6C56447D159E7C0800215467 /* Frameworks */,
 				6C56447E159E7C0800215467 /* Resources */,
 				5F8CCEA81AD3A555009D200E /* Copy Starter Pack */,
 				FB8B898C1D0E579700E68B38 /* Copy Bundle */,
-				600691463A7845E1B87A281D /* Copy Pods Resources */,
-				4A19B4D30188DB65DBE9ADE8 /* Embed Pods Frameworks */,
+				5F935F1ACF0EFA950F53794E /* [CP] Embed Pods Frameworks */,
+				82C16571C3BB7D9716271265 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -583,7 +587,7 @@
 		6C564477159E7C0800215467 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0820;
 				TargetAttributes = {
 					6C56447F159E7C0800215467 = {
 						DevelopmentTeam = EX596BNL45;
@@ -644,14 +648,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4A19B4D30188DB65DBE9ADE8 /* Embed Pods Frameworks */ = {
+		1DD9FD19E7AF111012155576 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F935F1ACF0EFA950F53794E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,34 +678,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flashlight/Pods-Flashlight-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		600691463A7845E1B87A281D /* Copy Pods Resources */ = {
+		82C16571C3BB7D9716271265 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flashlight/Pods-Flashlight-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF47F4946C894649ADC3835C /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -792,16 +796,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -829,12 +837,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -857,15 +868,17 @@
 		};
 		6C56449F159E7C0900215467 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05413329E3C2229FC2FE2736 /* Pods-Flashlight.debug.xcconfig */;
+			baseConfigurationReference = 1A17445B392804CE3CB1AE6B /* Pods-Flashlight.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = EX596BNL45;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasySIMBL",
+					"\"$(SRCROOT)/build/Debug\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EasySIMBL/Flashlight-Prefix.pch";
@@ -875,22 +888,25 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Pods-gpoaxpycjinulnbzpvilkgtvohcj/Build/Products/Debug",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nateparrott.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = EX596BNL45/;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		6C5644A0159E7C0900215467 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 406B089D37D45E210BD6A866 /* Pods-Flashlight.release.xcconfig */;
+			baseConfigurationReference = FB8706281AB8B45D8405C11C /* Pods-Flashlight.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EX596BNL45;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasySIMBL",
+					"\"$(SRCROOT)/build/Debug\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EasySIMBL/Flashlight-Prefix.pch";
@@ -900,8 +916,9 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Pods-gpoaxpycjinulnbzpvilkgtvohcj/Build/Products/Debug",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nateparrott.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = EX596BNL45/;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

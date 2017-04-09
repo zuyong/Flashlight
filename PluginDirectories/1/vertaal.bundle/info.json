@@ -1,5 +1,5 @@
 {
-    "name": "Vertaal",
+    "name": "vertaal",
     "displayName": "vertaal",
     "description": "Vertaalt woord van Engels naar Nederlands",
     "examples": ["Vertaal car", "vertaal car naar Nederlands"],

@@ -1,8 +1,0 @@
-{
-	"name": "TheTVDB",
-	"displayName": "TheTVDB Search",
-	"description": "Search TheTVDB from Spotlight.",
-	"examples": ["tvdb blacklist"],
-	"categories": ["Search"],
-	"creator_name": "Knoobie",
-}

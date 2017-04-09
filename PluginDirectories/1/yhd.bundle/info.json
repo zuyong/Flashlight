@@ -1,5 +1,5 @@
 {
-	"name": "YHD",
+	"name": "yhd",
 	"displayName": "YHD Search",
 	"description": "Search YHD.com (y) from Spotlight.",
 	"examples": ["yhd flashlight", "y flashlight"],

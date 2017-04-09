@@ -220,6 +220,8 @@
 				TargetAttributes = {
 					5FC13D3C1A4CD847008A0FE3 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = EX596BNL45;
+						ProvisioningStyle = Manual;
 					};
 					5FC13D4F1A4CD847008A0FE3 = {
 						CreatedOnToolsVersion = 6.1;
@@ -416,6 +418,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EX596BNL45;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Flashlight-ecbbmgoifutwxzgzjgruzjyizltl/Build/Products/Debug",
@@ -436,6 +439,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EX596BNL45;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Flashlight-ecbbmgoifutwxzgzjgruzjyizltl/Build/Products/Debug",

@@ -1,7 +1,0 @@
-{
-    "name": "cambridge",
-    "displayName": "Cambridge English Dictionary",
-    "description": "Search meaning in online dictionary",
-    "examples": ["cd word", "cambridge some phrase"],
-    "categories": ["Language"],
-}
