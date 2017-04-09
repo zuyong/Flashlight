@@ -7,7 +7,7 @@ Installation
 ------------
 
 1. Download [mySIMBL](https://github.com/w0lfschild/app_updates/raw/master/mySIMBL/mySIMBL_master.zip)
-2. Download [Flashlight](https://github.com/w0lfschild/app_updates/blob/master/Flashlight/Flashlight_master.zip)
+2. Download [Flashlight](https://github.com/w0lfschild/app_updates/raw/master/Flashlight/Flashlight_master.zip)
 3. Unzip downloads
 4. Open `mySIMBL.app` and install SIMBL
 5. Open `Flashlight.app` and install the plugins you want to use
@@ -37,8 +37,9 @@ Credits
 
 - [nate-parrott](https://github.com/nate-parrott) - [Original Flashlight](https://github.com/nate-parrott/Flashlight)
 - [alexzielenski](https://github.com/alexzielenski) - [macOS 10.10+ Opee support](https://github.com/alexzielenski/Flashlight)
-- [w0lfschild](https://github.com/w0lfschild) - [macOS 10.10+ support](https://github.com/w0lfschild/Flashlight)
-                                              - [macOS 10.12+ fixes](https://github.com/w0lfschild/Flashlight)
+- [w0lfschild](https://github.com/w0lfschild)    
+    - [macOS 10.10+ support](https://github.com/w0lfschild/Flashlight)    
+    - [macOS 10.12+ fixes](https://github.com/w0lfschild/Flashlight)
 
 
 Translations
