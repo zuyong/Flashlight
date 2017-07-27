@@ -1,5 +1,5 @@
 {
   "password" : "",
-  "user" : "firstname.lastname@westernacher.com",
-  "host" : "https:\/\/jira.westernacher.com"
+  "host" : "http:\/\/jira.amers.ime.reuters.com",
+  "user" : ""
 }
