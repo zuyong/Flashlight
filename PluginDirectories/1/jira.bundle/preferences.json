@@ -1,5 +1,6 @@
 {
-  "password" : "",
+  "password" : "reuters",
   "host" : "http:\/\/jira.amers.ime.reuters.com",
-  "user" : ""
+  "user" : "wzu",
+  "project":"CKB"
 }

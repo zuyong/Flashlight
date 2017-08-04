@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+</head>
+<body>
+  <div id="msg">
+  loading...
+  </div>
+  <div id="detail" style="display:none;">
+    <a id="cphtml" href="#">Copy html</a>  <a id="cptext" href="#">Copy text</a>
+    <br/>
+    <div><span class="key">Type: </span><span id="type" class="value">fff</span></div>
+    <div><span class="key">Status: </span><span id="status" class="value">fff</span></div>
+    <div><span class="key">Assignee: </span><span id="assignee" class="value">fff</span></div>
+    <div><span class="key">Reporter: </span><span id="reporter" class="value">fff</span></div>
+    <div><span class="key">Comments: </span><span id="comments" class="value">fff</span></div>
+    <div>
+  </div>
+  <br/>
+
+
+  <script>
+  function log(m) {
+    document.getElementById("msg").innerHTML=m;
+  }
+
+  function copyToClipboard(a, title) {
+      command = 'echo -n "'+a+'" | LANG=en_US.UTF-8 pbcopy && osascript -e \'display notification "'+title+' copied!" with title "Flashlight"\'';
+      flashlight.bash(command);
+  }
+
+  var tagsToReplace = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;'
+  };
+
+  function replaceTag(tag) {
+      return tagsToReplace[tag] || tag;
+  }
+
+  function safe_tags_replace(str) {
+      return str.replace(/[&<>]/g, replaceTag);
+  }
+
+  window.gxhr = new XMLHttpRequest();
+  window.ticket = "<!--ticket-->";
+  window.auth ="<!--auth--!>";
+  window.host = "<!--host--!>";
+
+  function xhr(url, method, auth, callback) {
+    var xhr = window.gxhr;
+    xhr.open(method, url, true);
+    xhr.setRequestHeader( 'Authorization', 'Basic '+auth);
+    xhr.setRequestHeader( 'Content-Type', 'application/json');
+    xhr.onload = function (e) {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          callback(xhr);
+        } else {
+          callback(null);
+        }
+      }
+    };
+    xhr.onerror = function (e) {
+      callback(null)
+    };
+    xhr.send();
+  }
+
+  xhr(window.host + "/rest/api/2/issue/"+window.ticket, "GET", window.auth, function(x) {
+    if (x) {
+      var json=JSON.parse(x.responseText);
+      var url = window.host + "/browse/"+window.ticket;
+      var html = "<a href='"+url+"'><b>"
+        + window.ticket + "</b></a>&nbsp;<i>" + json.fields.summary +"</i>";
+      var text = window.ticket + " [" + json.fields.summary +"] ";
+      var rtf = '{\\\\rtf1\\\\ansi {\\\\field{\\\\*\\\\fldinst{HYPERLINK "<url>" }}{\\\\fldrslt{\\\\ul\\\\cf1 {\\\\b <ticket>}}}} {\\\\i <title>} }'.replace("<url>", url).replace("<ticket>", window.ticket).replace("<title>", json.fields.summary);
+
+      var msgE = document.getElementById("msg");
+      msgE.innerHTML= html;
+      var copyE = document.getElementById("detail");
+      copyE.style.display = "block";
+      document.getElementById("cphtml").onclick = function(){copyToClipboard(rtf,"Html");};
+      document.getElementById("cptext").onclick = function(){copyToClipboard(text, "Text");};
+
+      document.getElementById("type").innerHTML = json.fields.issuetype.name;
+      document.getElementById("status").innerHTML = json.fields.status.name;
+      document.getElementById("assignee").innerHTML = json.fields.assignee ? json.fields.assignee.displayName : "Unassigned";
+
+      document.getElementById("reporter").innerHTML = json.fields.reporter.displayName;
+      var comments = json.fields.comment ? json.fields.comment.comments:null;
+      var comment = "None";
+      if(comments && comments.length > 0) {
+        var last = comments[comments.length-1];
+        var cname = last.author.displayName;
+        var ctime = last.updated;
+        var cbody = last.body;
+        comment =  "<br/>{author} - {time}<br/>{body}".replace("{author}", cname).replace("{time}", ctime).replace("{body}", safe_tags_replace(cbody));
+
+      }
+      document.getElementById("comments").innerHTML = comment;
+    } else {
+      document.getElementById("msg").innerHTML=window.ticket + " is not found.";
+    }
+  });
+  </script>
+</body>
